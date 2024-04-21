@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Data Types</title>
+</head>
+<body>
+    <!-- Js Data Types -->
+    <script>
+        /*
+        JavaScript has 8 Datatypes
+        1. String
+        2. Number
+        3. Bigint
+        4. Boolean
+        5. Undefined
+        6. Null
+        7. Symbol
+        8. Object
+
+        The Object Datatype
+        The object data type can contain:
+        1. An object
+        2. An array
+        3. A date
+        */
+
+        // Number
+        let x = 30;
+        let y = 40.5;
+
+        // String
+        let name = "Ahmed";
+        let name2 = 'Ahmed';
+
+        // Boolean
+        let t = true;
+        let f = false;
+
+        // Undefined
+        let u;
+
+        // Null
+        let n = null;
+
+        // Symbol
+        let s = Symbol("Ahmed");
+
+        // Object
+        let Person = {name: "Ahmed", age: 30};
+        console.log("Your name is: " + Person.name + " and your age is: " + Person.age);
+
+        //Array obejct
+        let cars = ["Saab", "Volvo", "BMW"];
+        console.log(cars[0],cars[1],cars[2]);
+
+        // date object
+        let date = new Date();
+        console.log(date.toDateString());
+
+        // The typeof Operator
+        typeof ""             // Returns "string"
+        typeof "John"         // Returns "string"
+        typeof "John Doe"     // Returns "string"
+
+        // another example typeof
+        typeof 3.14           // Returns "number"
+        typeof 10n            // Returns "bigint"
+        typeof true           // Returns "boolean"
+        typeof false          // Returns "boolean"
+        typeof Symbol()       // Returns "symbol"
+        typeof 10n            // Returns "bigint"
+        typeof null           // Returns "object"
+        typeof undefined      // Returns "undefined"
+        //typeof ()            // Returns "function"
+        typeof {}             // Returns "object"
+        typeof new String()   // Returns "object"
+        typeof new Number()   // Returns "object"
+        typeof new Boolean()  // Returns "object"
+        typeof new Object()   // Returns "object"
+
+        // In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+
+        let x1;
+        console.log(x1);
+        let car;    // Value is undefined, type is undefined
+        console.log(car);
+
+        // An empty value has nothing to do with undefined.
+        // An empty string has both a legal value and a type.
+        let car1 = "";    // The value is "", the typeof is "string"
+
+    </script>
+    
+</body>
+</html>
