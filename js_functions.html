@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- javascript functions -->
+    <!-- A JavaScript function is a block of code designed to perform a particular task. -->
+    <!-- A JavaScript function is executed when "something" invokes it (calls it). -->
+
+    <!-- javascript function examples -->
+    <script>
+        // let x = 10;
+        // let y = 20;
+       function Test(x, y) { //use arguments if needed
+        return  x + y;
+       }
+       let sum = Test(10, 20);
+       console.log(sum);
+       //call the function
+       Test();
+    </script>
+
+    <!-- Example of javascript function -->
+    <script>
+        function toCelsius(fahrenheit){
+        return (5/9) * (fahrenheit-32);
+    }
+    let data = toCelsius(77);
+    console.log(data);
+
+    //call the function
+    toCelsius();
+
+// Local Variables
+// Variables declared within a JavaScript function, become LOCAL to the function.
+// Variables declared outside a function, become GLOBAL.
+
+// code here can NOT use carName
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+    
+</script>
+
+
+</body>
+</html>
