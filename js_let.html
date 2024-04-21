@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Let</title>
+</head>
+<body>
+
+    <!-- Js let keyword -->
+    <!-- Variables declared inside a { } block cannot be accessed from outside the block: -->
+    <script>
+        {
+            var x = 5;
+        }
+        //access in here
+        console.log(x); //you cannot access outside of the bracket, that means block scope or local scope
+
+
+        // Variables declared with varinside a { } block can be accessed from outside the block:
+        {
+            var y = 10;
+        }
+        //access in here
+        console.log(y); //you can access outside of the bracket, that means global scope
+    </script>
+
+    
+</body>
+</html>
