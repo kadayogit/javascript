@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- to disply in html page -->
+    <div id="car_id">
+
+    </div>
+
+    <!-- js objects examples -->
+    <script>
+        // javascript objects
+        // The values are written as name:value pairs (name and value separated by a colon).
+        const car = {name:"vitz", model:2020, color:"Black", price:3500};
+        //  first way you can access object
+        console.log("The car name: "+car.name,"model: "+ car.model, "and, color :" + car.color, "the price: " + car.price);
+        // second way you can access the object
+        console.log(car["name"]);
+
+        // if you went to display html page use this way and concatinate 
+        document.getElementById("car_id").innerHTML = this.name +" "+ car.model +" "+ car.color + " " +car.price;
+        document.getElementById("car_id").style.color = "red";
+
+        // Objects can also have methods.
+        // Methods are actions that can be performed on objects.
+        const person = {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() {
+        return this.firstName + " " + this.lastName;
+         }
+        };
+    </script>
+
+    
+</body>
+</html>
