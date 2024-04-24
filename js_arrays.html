@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js arrays</title>
+</head>
+<body>
+    <!-- js arrays [] use brackets for arrays -->
+   <script>
+    // Creating an Array example
+    const cars = ["Toyota", "BMW","Nissan"];
+    console.log(cars[0]);
+
+    // You can also create an array, and then provide the element
+    const car = [];
+
+    car[0] = "Guled";
+    car[1] = "Mohamed";
+    car[2] = "Odowa";
+
+    // Using the JavaScript Keyword new
+    const carss = new Array("Toyota", "BMW", "Nissan");
+    document.write(carss);
+
+    //toString method
+    document.write(carss.toString());
+
+    // to return the number of element use length method
+    document.write(carss.length);
+
+    // You access an array element by referring to the index number:
+
+    // Looping Array Elements
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fLen = fruits.length;
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    // to display the browser
+    document.write(text);
+
+    // Adding Array Elements
+
+    const cities = ["Hargeisa", "Borama", "Berbera", "Burco", "Lascanod"];
+    // output 
+    console.log(cities);
+
+    //how to add new element to the array element
+    cities.push("Ceerigabo");
+    console.log(cities);
+
+    // Associative Arrays example
+    const person = [];
+
+    person[0] = "John";
+    person[1] = "Doe";
+    person[2] = 46;
+    person.length;    // Will return 3
+    person[0];        // Will return "John"
+
+// The instanceof operator returns true if an object is created by a given constructor:
+    const fruits2 = ["Banana", "Orange", "Apple"];
+
+    fruits2 instanceof Array;
+
+    // The pop() method removes the last element from an array:
+    const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits3.pop();
+    console.log(fruits3);
+
+    // The shift() method removes the first array element and "shifts" all other elements to a lower index.
+    const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits4.shift();
+    console.log(fruits4);
+
+    // The unshift() method returns the new array length:
+    const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits5.unshift("Lemon");
+
+
+    // The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+    const myArr = [[1,2],[3,4],[5,6]];
+    const newArr = myArr.flat();
+
+    // The splice() method can be used to add new items to an array:
+    const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits6.splice(2, 0, "Lemon", "Kiwi");
+
+    // Using splice() to Remove Elements
+    const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits7.splice(0, 1);
+
+    // Sorting an Array
+    // The sort() method sorts an array alphabetically:
+    const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits8.sort();
+    console.log(fruits8);
+
+    // The reverse() method reverses the elements in an array:
+    const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits9.reverse();
+
+    // The every() method checks if all array values pass a test.
+    const numbers = [45, 4, 9, 16, 25];
+    let allOver18 = numbers.every(myFunction);
+    function myFunction(value, index, array) {
+    return value > 18;
+    console.log(allOver18);
+    }
+
+   </script>
+    
+</body>
+</html>
