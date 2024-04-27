@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Modules examples</title>
+</head>
+<body>
+    <!-- js modules -->
+    <script>
+       import { name, age } from "./person.js";
+
+        const person = () => {
+        const name = "Jesse";
+        const age = 40;
+        return name + ' is ' + age + 'years old.';
+        };
+
+        export default person;
+
+    </script>
+</body>
+</html>
