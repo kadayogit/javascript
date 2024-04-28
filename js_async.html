@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS async examples</title>
+</head>
+<body>
+    <!-- js async example on promises -->
+
+    <div id="demo">
+
+    </div>
+
+    <script>
+        // "async and await make promises easier to write"
+
+        // async makes a function return a Promise
+
+        // await makes a function wait for a Promise
+
+        // Async Syntax
+
+       async function test() {
+            return "Hello World!";
+        }
+        //call a function
+        test();
+        console.log(test());
+
+        // Basic Syntax
+        async function myDisplay() {
+        let myPromise = new Promise(function(resolve, reject) {
+        resolve("I love You !!");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+        }
+        myDisplay();
+    </script>
+    
+</body>
+</html>
