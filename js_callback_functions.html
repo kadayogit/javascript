@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function examples</title>
+</head>
+<body>
+    <!-- A callback is a function passed as an argument to another function -->
+    <script>
+        // Function Sequence
+        function callbackFunction() {
+           const result = myDisplay("Hello, Guled");
+        }
+        function secondcallbackFunction() {
+            const result = myDisplay("Guled Goodbye sir!");
+        }
+        // call a functions
+        callbackFunction();
+        secondcallbackFunction();
+
+        // Another example
+        function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+        }
+
+        let result = myCalculator(5, 5);
+        myDisplayer(result);
+
+        // A callback is a function passed as an argument to another function.
+        function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+    </script>
+    
+</body>
+</html>
