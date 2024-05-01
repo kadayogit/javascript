@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js json examle</title>
+</head>
+<body>
+
+    <!-- display json output -->
+    <div id="demo">
+
+    </div>
+    <!-- js json example -->
+    <script>
+        // JSON format
+        // {"name": "Guled"};
+
+        // Javascript format
+        {name: "Guled"};
+
+        // With JavaScript you can create an object and assign data to it, like this:
+        person = {name:"John", age:31, city:"New York"};
+
+        // You can access a JavaScript object like this:
+        person.name;
+
+        // It can also be accessed like this:
+        person['name'];
+
+        //The following JSON and XML examples both define an employees object, with an array of 3 employees:
+        // JSON example
+        {"employees" [
+        { "firstName":"John", "lastName":"Doe" },
+        { "firstName":"Anna", "lastName":"Smith" },
+        { "firstName":"Peter", "lastName":"Jones" }
+        ]};
+
+        // XML Example
+        <employees>
+        <employee>
+        <firstName>John</firstName> <lastName>Doe</lastName>
+        </employee>
+        <employee>
+        <firstName>Anna</firstName> <lastName>Smith</lastName>
+        </employee>
+        <employee>
+        <firstName>Peter</firstName> <lastName>Jones</lastName>
+        </employee>
+        </employees>
+    </script>
+
+    <!-- json in object example -->
+    <script>
+        // {
+        // "employee":{"name":"John", "age":30, "city":"New York"}
+        // }
+
+        // JSON makes it possible to store JavaScript objects as text.
+        // Storing data in local storage
+        // Storing data:
+        const myObj = {name: "John", age: 31, city: "New York"};
+        const myJSON = JSON.stringify(myObj);
+        localStorage.setItem("testJSON", myJSON);
+
+        // Retrieving data:
+        let text = localStorage.getItem("testJSON");
+        let obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML = obj.name;
+        console.log(obj);
+
+        // Sending Data to the server in JSON
+        const myObj1 = {name: "John", age: 31, city: "New York"};
+        const myJSON1 = JSON.stringify(myObj1);
+        window.location = "demo_json.php?x=" + myJSON1;
+
+        // Receiving Data from server in JSON format
+        // If you receive data in JSON format, you can easily convert it into a JavaScript object:
+        const myJSON2 = '{"name":"John", "age":31, "city":"New York"}';
+        const myObj2 = JSON.parse(myJSON2);
+        document.getElementById("demo").innerHTML = myObj2.name;
+
+    </script>
+
+
+</body>
+</html>
